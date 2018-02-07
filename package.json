@@ -1,0 +1,30 @@
+{
+  "name": "meyesaver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html -d build/ --target=electron",
+    "start-dev": "ELECTRON_START_URL=http://localhost:1234 electron .",
+    "start": "electron .",
+    "build": "parcel build ./src/index.html -d build/ --public-url ./ --target=electron",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "1.7.12",
+    "electron-builder": "^19.56.0",
+    "electron-reload": "^1.2.2",
+    "node-sass": "^4.7.2"
+  },
+  "dependencies": {
+    "moment": "^2.20.1"
+  },
+  "productName": "mEyeSaver",
+  "build": {
+    "appId": "com.electron.meyesaver"
+  }
+}
